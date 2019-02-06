@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="obj"
+            type="com.gsanthosh.app.model.Post" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:text="@{obj.title}"
+            android:textColor="@color/title"
+            tools:text="@string/lorum" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="8dp"
+            android:text="@{obj.body}"
+            android:textColor="@color/address"
+            android:textSize="12sp"
+            tools:text="@string/lorum" />
+    </LinearLayout>
+</layout>
